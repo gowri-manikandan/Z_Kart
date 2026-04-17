@@ -4,9 +4,13 @@ import java.util.Scanner;
 
 public class SignUpView {
     private final SignUpModel model;
-    private final Scanner scanner = new Scanner(System.in);
+
 
     public SignUpView() {
         model = new SignUpModel(this);
+    }
+
+    public  void init(){
+        Scanner scanner = new Scanner(System.in);
     }
 }

@@ -3,9 +3,9 @@ package com.gowri_manikandan.Z_Kart.features.card.manage;
 import java.util.Scanner;
 
 public class CardManageView {
-    private final CardManageModel model;
+    private final CardManageModel cardManageModel;
     CardManageView(){
-        model = new CardManageModel(this);
+        cardManageModel = new CardManageModel(this);
     }
     private final Scanner scanner = new Scanner(System.in);
 

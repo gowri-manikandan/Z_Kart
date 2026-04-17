@@ -1,8 +1,8 @@
 package com.gowri_manikandan.Z_Kart.features.order.manage;
 
-public class OrderManageModel {
-    private final OrderManageView view;
-    OrderManageModel(OrderManageView view){
-        this.view = view;
+class OrderManageModel {
+    private final OrderManageView orderManageView;
+    OrderManageModel(OrderManageView orderManageView){
+        this.orderManageView = orderManageView;
     }
 }

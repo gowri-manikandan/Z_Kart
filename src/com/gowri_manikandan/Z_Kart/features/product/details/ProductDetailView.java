@@ -3,9 +3,9 @@ package com.gowri_manikandan.Z_Kart.features.product.details;
 import java.util.Scanner;
 
 public class ProductDetailView {
-    private final ProductDetailModel model;
+    private final ProductDetailModel productDetailModel;
     ProductDetailView(){
-        model = new ProductDetailModel(this);
+        productDetailModel = new ProductDetailModel(this);
     }
     private final Scanner scanner = new Scanner(System.in);
 }

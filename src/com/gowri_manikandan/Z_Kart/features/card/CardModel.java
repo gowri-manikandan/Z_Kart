@@ -1,9 +1,9 @@
 package com.gowri_manikandan.Z_Kart.features.card;
 
-public class CardModel {
-    private final CardView view;
-    CardModel(CardView view){
-        this.view = view;
+class CardModel {
+    private final CardView cardView;
+    CardModel(CardView cardView){
+        this.cardView = cardView;
     }
 
 }

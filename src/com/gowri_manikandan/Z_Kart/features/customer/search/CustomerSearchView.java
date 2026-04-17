@@ -3,9 +3,9 @@ package com.gowri_manikandan.Z_Kart.features.customer.search;
 import java.util.Scanner;
 
 public class CustomerSearchView {
-    private final CustomerSearchModel model;
+    private final CustomerSearchModel customerSearchModel;
     CustomerSearchView(){
-        model = new CustomerSearchModel(this);
+        customerSearchModel = new CustomerSearchModel(this);
     }
     private final Scanner scanner = new Scanner(System.in);
 }

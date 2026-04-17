@@ -1,8 +1,8 @@
 package com.gowri_manikandan.Z_Kart.features.product.manage;
 
-public class ProductManageModel {
-    private final ProductManageView view;
-    ProductManageModel(ProductManageView view){
-        this.view = view;
+class ProductManageModel {
+    private final ProductManageView productManageView;
+    ProductManageModel(ProductManageView productManageView){
+        this.productManageView = productManageView;
     }
 }

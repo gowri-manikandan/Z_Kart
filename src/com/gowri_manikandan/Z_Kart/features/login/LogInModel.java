@@ -1,8 +1,8 @@
 package com.gowri_manikandan.Z_Kart.features.login;
 
-public class LogInModel {
-    private final LogInView view;
-    LogInModel(LogInView view){
-        this.view = view;
+class LogInModel {
+    private final LogInView logInView;
+    LogInModel(LogInView logInView){
+        this.logInView = logInView;
     }
 }
