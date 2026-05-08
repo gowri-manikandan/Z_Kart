@@ -1,13 +1,31 @@
 package com.gowri_manikandan.Z_Kart.repository.dto;
 
+import java.util.List;
+
 public class Order {
     private long id;
     private long customerId;
+    private List<OrderItem> items;
     private double amount;
-    private enum status {PENDING,CONFIRMED,SHIPPED,DELIVERED,CANCELLED}
+    private OrderStatus status;
     private String address;
-    private String date;
+    private long createdAt;
 
+    // Default constructor
+    public Order() {}
+
+    // Constructor with parameters
+    public Order(long id, long customerId, List<OrderItem> items, double amount, OrderStatus status, String address, long createdAt) {
+        this.id = id;
+        this.customerId = customerId;
+        this.items = items;
+        this.amount = amount;
+        this.status = status;
+        this.address = address;
+        this.createdAt = createdAt;
+    }
+
+    // Getters and Setters
     public long getId() {
         return id;
     }
@@ -24,12 +42,28 @@ public class Order {
         this.customerId = customerId;
     }
 
+    public List<OrderItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<OrderItem> items) {
+        this.items = items;
+    }
+
     public double getAmount() {
         return amount;
     }
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
     }
 
     public String getAddress() {
@@ -40,11 +74,24 @@ public class Order {
         this.address = address;
     }
 
-    public String getDate() {
-        return date;
+    public long getCreatedAt() {
+        return createdAt;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setCreatedAt(long createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", items=" + items +
+                ", amount=" + amount +
+                ", status=" + status +
+                ", address='" + address + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
 }

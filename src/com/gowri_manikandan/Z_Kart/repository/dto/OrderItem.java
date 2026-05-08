@@ -4,13 +4,30 @@ public class OrderItem {
     private long id;
     private long orderId;
     private long productId;
-    private long name;
+    private String name;
     private double price;
-    private  int count;
+    private int count;
     private String model;
     private String category;
     private String brand;
 
+    // Default constructor
+    public OrderItem() {}
+
+    // Constructor with parameters
+    public OrderItem(long id, long orderId, long productId, String name, double price, int count, String model, String category, String brand) {
+        this.id = id;
+        this.orderId = orderId;
+        this.productId = productId;
+        this.name = name;
+        this.price = price;
+        this.count = count;
+        this.model = model;
+        this.category = category;
+        this.brand = brand;
+    }
+
+    // Getters and Setters
     public long getId() {
         return id;
     }
@@ -35,11 +52,11 @@ public class OrderItem {
         this.productId = productId;
     }
 
-    public long getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(long name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -81,5 +98,20 @@ public class OrderItem {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderItem{" +
+                "id=" + id +
+                ", orderId=" + orderId +
+                ", productId=" + productId +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", count=" + count +
+                ", model='" + model + '\'' +
+                ", category='" + category + '\'' +
+                ", brand='" + brand + '\'' +
+                '}';
     }
 }

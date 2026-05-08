@@ -2,10 +2,22 @@ package com.gowri_manikandan.Z_Kart.repository.dto;
 
 public class CardItem {
     private long id;
-    private long cardId;
+    private long customerId; // since cart is per customer
     private long productId;
-    private int count;
+    private int quantity;
 
+    // Default constructor
+    public CardItem() {}
+
+    // Constructor with parameters
+    public CardItem(long id, long customerId, long productId, int quantity) {
+        this.id = id;
+        this.customerId = customerId;
+        this.productId = productId;
+        this.quantity = quantity;
+    }
+
+    // Getters and Setters
     public long getId() {
         return id;
     }
@@ -14,12 +26,12 @@ public class CardItem {
         this.id = id;
     }
 
-    public long getCardId() {
-        return cardId;
+    public long getCustomerId() {
+        return customerId;
     }
 
-    public void setCardId(long cardId) {
-        this.cardId = cardId;
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
     }
 
     public long getProductId() {
@@ -30,11 +42,21 @@ public class CardItem {
         this.productId = productId;
     }
 
-    public int getCount() {
-        return count;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "CardItem{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", productId=" + productId +
+                ", quantity=" + quantity +
+                '}';
     }
 }

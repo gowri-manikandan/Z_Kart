@@ -2,10 +2,22 @@ package com.gowri_manikandan.Z_Kart.repository.dto;
 
 public class PasswordHistory {
     private long id;
-    private long CustomerId;
-    private String passWord;
-    private long leastChange;
+    private long customerId;
+    private String password;
+    private long changedAt;
 
+    // Default constructor
+    public PasswordHistory() {}
+
+    // Constructor with parameters
+    public PasswordHistory(long id, long customerId, String password, long changedAt) {
+        this.id = id;
+        this.customerId = customerId;
+        this.password = password;
+        this.changedAt = changedAt;
+    }
+
+    // Getters and Setters
     public long getId() {
         return id;
     }
@@ -15,26 +27,36 @@ public class PasswordHistory {
     }
 
     public long getCustomerId() {
-        return CustomerId;
+        return customerId;
     }
 
     public void setCustomerId(long customerId) {
-        CustomerId = customerId;
+        this.customerId = customerId;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public long getLeastChange() {
-        return leastChange;
+    public long getChangedAt() {
+        return changedAt;
     }
 
-    public void setLeastChange(long leastChange) {
-        this.leastChange = leastChange;
+    public void setChangedAt(long changedAt) {
+        this.changedAt = changedAt;
+    }
+
+    @Override
+    public String toString() {
+        return "PasswordHistory{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", password='" + password + '\'' +
+                ", changedAt=" + changedAt +
+                '}';
     }
 }
