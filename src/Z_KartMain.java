@@ -8,8 +8,9 @@ import com.gowri_manikandan.Z_Kart.utils.ConsoleUtil;
 import com.gowri_manikandan.Z_Kart.utils.SessionManager;
 
 public class Z_KartMain {
-    public static final int VERSION = 1;
-    public static final String VERSION_NO = "0.0.1";
+
+    public static final String appVersion = "0.0.1";
+    public static final String appName = "Z_Kart";
 
     private static final LogInView loginView = new LogInView();
     private static final SignUpView signUpView = new SignUpView();
@@ -19,11 +20,14 @@ public class Z_KartMain {
     private static final CustomerView customerView = new CustomerView();
     private static final SessionManager session = SessionManager.getInstance();
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        System.out.println("Welcome to " + appName + " - Version: " + appVersion);
         showMainMenu();
     }
 
-    private static void showMainMenu() {
+    private static void showMainMenu()
+    {
         while (true) {
             ConsoleUtil.displayHeader("Z KART");
             System.out.println("1. Login");
@@ -35,9 +39,11 @@ public class Z_KartMain {
                 case 1:
                     loginView.displayLoginMenu();
                     int loginChoice = ConsoleUtil.readInt("Enter choice: ");
-                    if (loginChoice == 1) {
+                    if (loginChoice == 1)
+                    {
                         loginView.showLoginForm();
-                        if (session.isLoggedIn()) {
+                        if (session.isLoggedIn())
+                        {
                             showUserMenu();
                         }
                     }
@@ -58,9 +64,11 @@ public class Z_KartMain {
         }
     }
 
-    private static void showUserMenu() {
-        while (session.isLoggedIn()) {
-            ConsoleUtil.displayHeader("User Menu");
+    private static void showUserMenu()
+    {
+        while (session.isLoggedIn())
+        {
+            ConsoleUtil.displayHeader("Menu");
             System.out.println("1. View Products");
             System.out.println("2. Search Products");
             System.out.println("3. Cart Management");
@@ -117,7 +125,8 @@ public class Z_KartMain {
         }
     }
 
-    private static void showCartMenu() {
+    private static void showCartMenu()
+    {
         while (true) {
             cartView.displayCartMenu();
             int choice = ConsoleUtil.readInt("Enter choice: ");

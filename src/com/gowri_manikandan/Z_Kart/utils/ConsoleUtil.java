@@ -9,7 +9,8 @@ public class ConsoleUtil {
         System.out.println("======================== " + title.toUpperCase() + " ========================");
     }
 
-    public static void displaySeparator() {
+    public static void displaySeparator()
+    {
         System.out.println("================================================================");
     }
 
